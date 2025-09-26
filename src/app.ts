@@ -1,6 +1,7 @@
 import express, { Request, Response, NextFunction } from 'express';
 const cors = require('cors');
-const router = require('./routes/server.route');
+const clientRouter = require('./routes/client/server.route');
+const adminRouter = require('./routes/admin/server.route')
 
 const app = express();
 
@@ -29,6 +30,7 @@ app.use((err: Error, _req: Request, res: Response, _next: NextFunction) => {
   res.status(500).json({ message: 'Internal Server Error' });
 });
 
-router(app);
+clientRouter(app)
+adminRouter(app)
 
 export default app;
