@@ -5,14 +5,16 @@
   "repository": "git@github.com:TheBluemist1404/express-be-template.git",
   "author": "TheBluemist1404 <hoang.ct1lhp@gmail.com>",
   "scripts": {
-    "dev": "nodemon --watch src --ext ts --exec ts-node src/server.ts",
+    "dev": "nodemon --watch src --ext ts --exec \"node --loader ts-node/esm --loader tsconfig-paths/esm src/server.ts\"",
     "build": "tsc",
-    "start": "node dist/server.js"
+    "start": "node --loader tsconfig-paths/esm dist/server.js"
   },
   "license": "MIT",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^5.1.0"
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "tsconfig-paths": "^4.2.0"
   },
   "devDependencies": {
     "@types/express": "^5.0.3",
