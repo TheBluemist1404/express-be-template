@@ -1,7 +1,7 @@
 import express, { Request, Response, NextFunction } from 'express';
 const cors = require('cors');
-const clientRouter = require('./routes/client/server.route');
-const adminRouter = require('./routes/admin/server.route')
+import {router as clientRouter} from './routes/client/server.route';
+import {router as adminRouter} from './routes/admin/server.route';
 
 const app = express();
 

@@ -1,4 +1,7 @@
 import app from "./app";
+import dotenev from 'dotenv'
+
+dotenev.config();
 
 const PORT = process.env.PORT || 3000;
 
