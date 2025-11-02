@@ -1,5 +1,5 @@
 import { Express } from "express";
-const authRoutes = require('./auth.route');
+import authRoutes from './auth.route';
 
 export const router = (app: Express) => {
   const version = '/api/v1';

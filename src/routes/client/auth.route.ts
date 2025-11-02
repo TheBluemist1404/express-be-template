@@ -8,4 +8,4 @@ const router = Router()
 router.post('/register',validate.validateRegister, controller.register);
 router.post('/login',validate.validateLogin, controller.login);
 
-module.exports = router;
+export default router;
